@@ -1,59 +1,185 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Conexão Campo-Cidade</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --verde-campo: #4caf50;
+      --vermelho-cidade: #c62828;
+      --fundo: #f5f5f5;
+      --texto: #333;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--fundo);
+      color: var(--texto);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(to right, var(--verde-campo), var(--vermelho-cidade));
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--texto);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    section h2 {
+      color: var(--verde-campo);
+    }
+
+    .destacado {
+      color: var(--vermelho-cidade);
+      font-weight: bold;
+    }
+
+    .box {
+      background-color: white;
+      border-left: 5px solid var(--verde-campo);
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: var(--vermelho-cidade);
+      color: white;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #a01515;
+    }
+
+    footer {
+      background-color: #ddd;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>🌿 Conexão Campo-Cidade 🌆</h1>
-    <nav>
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#exemplos">Exemplos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+    <h1>Conexão Campo-Cidade</h1>
+    <p>Unindo culturas, saberes e tecnologias para um futuro sustentável</p>
   </header>
 
-  <main>
-    <section id="sobre">
-      <h2>Sobre o Projeto</h2>
-      <p>Este projeto foi desenvolvido por Kauã Guilherme F. da Silva, aluno do 3º ano B, para o concurso Agrinho 2025, com o tema <strong>"Festejando a Conexão Campo-Cidade"</strong>.</p>
-      <p>O objetivo é destacar como a tecnologia e a cultura rural se complementam, promovendo sustentabilidade, inovação e desenvolvimento social.</p>
-    </section>
+  <nav>
+    <a href="#tema">Tema</a>
+    <a href="#objetivos">Objetivos</a>
+    <a href="#exemplos">Exemplos</a>
+    <a href="#sustentabilidade">Sustentabilidade</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#contato">Contato</a>
+  </nav>
 
-    <section id="exemplos">
-      <h2>Exemplos de Integração</h2>
-      <ul>
-        <li><strong>Agricultura de precisão:</strong> drones e sensores para monitoramento das plantações.</li>
-        <li><strong>Energia solar:</strong> uso em propriedades rurais reduzindo custos.</li>
-        <li><strong>Internet no campo:</strong> acesso a serviços digitais e educação.</li>
-        <li><strong>Irrigação inteligente:</strong> sensores que evitam desperdício de água.</li>
-      </ul>
-    </section>
+  <section id="tema">
+    <h2>Tema do Projeto</h2>
+    <p>Este site destaca a <span class="destacado">importância vital da conexão entre o campo e a cidade</span>, mostrando como a <strong>cultura rural tradicional</strong> e a <strong>tecnologia urbana avançada</strong> se complementam para construir um futuro mais equilibrado e sustentável.</p>
+  </section>
 
-    <section id="contato">
-      <h2>Fale Conosco</h2>
-      <form>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required />
+  <section id="objetivos">
+    <h2>Objetivos</h2>
+    <div class="box">📌 Apresentar soluções tecnológicas que transformam o campo e integram as cidades, como agricultura de precisão, energia solar e internet rural.</div>
+    <div class="box">🌱 Promover a conscientização sobre sustentabilidade e inovação no meio urbano e rural.</div>
+    <div class="box">📱 Criar um site simples, acessível e responsivo para todos os públicos.</div>
+    <div class="box">🤝 Fomentar o respeito e o diálogo entre moradores da cidade e do campo.</div>
+  </section>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required />
+  <section id="exemplos">
+    <h2>Exemplos Práticos</h2>
+    <ul>
+      <li><strong>Agricultura de precisão:</strong> uso de drones e sensores para monitorar plantações.</li>
+      <li><strong>Energia renovável no campo:</strong> placas solares que geram energia limpa e econômica.</li>
+      <li><strong>Internet nas zonas rurais:</strong> conectividade que garante acesso a educação e serviços.</li>
+      <li><strong>Sistemas inteligentes de irrigação:</strong> sensores que controlam a água automaticamente.</li>
+    </ul>
+  </section>
 
-        <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" name="telefone" required />
+  <section id="sustentabilidade">
+    <h2>Sustentabilidade na Prática</h2>
+    <ul>
+      <li>🌿 Reduzir o uso de água e energia elétrica.</li>
+      <li>🗑️ Separar o lixo e incentivar a coleta seletiva.</li>
+      <li>🥕 Consumir alimentos orgânicos e locais.</li>
+      <li>🌳 Plantar árvores e preservar áreas verdes.</li>
+    </ul>
+  </section>
 
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-  </main>
+  <section id="depoimentos">
+    <h2>Depoimentos</h2>
+    <p><em>“Na cidade, entendemos melhor o esforço de quem está no campo. Valorizar essa conexão é essencial.”</em> — João, morador urbano</p>
+    <p><em>“Com internet e energia solar, nossa produção melhorou muito. A cidade precisa saber disso.”</em> — Maria, produtora rural</p>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <form>
+      <label for="nome">Seu nome:</label>
+      <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+      <label for="email">Seu e-mail:</label>
+      <input type="email" id="email" placeholder="exemplo@gmail.com" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" rows="4" placeholder="Escreva aqui sua mensagem..."></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
 
   <footer>
-    <p>© 2025 Kauã Guilherme F. da Silva | Projeto Agrinho 2025 | #agrinho</p>
+    <p>Projeto Agrinho 2025 - Desenvolvido por Kauã Guilherme F. da Silva - 3º ano B</p>
   </footer>
+
 </body>
 </html>
