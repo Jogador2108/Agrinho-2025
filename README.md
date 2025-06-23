@@ -9,3 +9,5 @@ Construído exclusivamente com HTML e CSS, o site segue boas práticas de estrut
 O código está modularizado e comentado para facilitar manutenção e atualização. O site é responsivo, garantindo boa visualização em diferentes dispositivos, e foi publicado via GitHub Pages com a hashtag oficial #agrinho no repositório, atendendo a todos os requisitos do concurso.
 
 Este projeto representa o compromisso de unir tecnologia e consciência ambiental para valorizar a conexão entre campo e cidade, fortalecendo a ideia de que juntos somos mais sustentáveis e desenvolvidos.
+
+#agrinho #agrinho2025 #programaçãofrontend #html #css #senarpr
